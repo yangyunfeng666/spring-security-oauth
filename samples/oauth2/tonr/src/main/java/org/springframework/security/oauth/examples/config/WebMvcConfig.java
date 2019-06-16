@@ -137,6 +137,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 		return conversionService;
 	}
 
+	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}

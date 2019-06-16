@@ -45,7 +45,7 @@
 
 		<p>
 			This is a website that will allow you to print your photos that
-			you've uploaded to <a href="http://localhost:8080/sparklr2/">Sparklr</a>!
+			you've uploaded to <a href="http://localhost:8081/sparklr2/">Sparklr</a>!
 			And since this site uses <a href="http://oauth.net">OAuth</a> to
 			access your photos, we will never ask you for your Sparklr
 			credentials.

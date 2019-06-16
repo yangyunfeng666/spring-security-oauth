@@ -22,6 +22,7 @@ public class PhotoServiceImpl implements PhotoService {
 
 	private List<PhotoInfo> photos;
 
+	@Override
 	public Collection<PhotoInfo> getPhotosForCurrentUser(String username) {
 
 		ArrayList<PhotoInfo> infos = new ArrayList<PhotoInfo>();
@@ -33,7 +34,7 @@ public class PhotoServiceImpl implements PhotoService {
 		return infos;
 
 	}
-
+	@Override
 	public InputStream loadPhoto(String id) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		if (authentication.getPrincipal() instanceof UserDetails) {

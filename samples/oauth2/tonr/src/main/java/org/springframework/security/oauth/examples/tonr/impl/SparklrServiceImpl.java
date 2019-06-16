@@ -28,7 +28,7 @@ public class SparklrServiceImpl implements SparklrService {
 	private String sparklrPhotoURLPattern;
 	private RestOperations sparklrRestTemplate;
 	private RestOperations trustedClientRestTemplate;
-
+	@Override
 	public List<String> getSparklrPhotoIds() throws SparklrException {
 		try {
 			InputStream photosXML = new ByteArrayInputStream(sparklrRestTemplate.getForObject(
@@ -59,11 +59,12 @@ public class SparklrServiceImpl implements SparklrService {
 		}
 	}
 
+	@Override
 	public InputStream loadSparklrPhoto(String id) throws SparklrException {
 		return new ByteArrayInputStream(sparklrRestTemplate.getForObject(
 				URI.create(String.format(sparklrPhotoURLPattern, id)), byte[].class));
 	}
-
+	@Override
 	public String getTrustedMessage() {
 		return this.trustedClientRestTemplate.getForObject(URI.create(sparklrTrustedMessageURL), String.class);
 	}
