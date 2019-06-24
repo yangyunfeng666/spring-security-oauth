@@ -85,3 +85,11 @@ the command line before importing the samples (using `mvn install`).
 
 * Visit the `tonr` app in a browser
   (e.g. [http://localhost:8080/tonr2](http://localhost:8080/tonr2)).
+
+### 启动配置
+```
+  tonr2 启动
+  mvn tomcat7:run 
+  sparklr2 启动
+  mvn tomcat7:run -Dmaven.tomcat.port=8081
+```
